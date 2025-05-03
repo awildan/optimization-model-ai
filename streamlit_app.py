@@ -14,10 +14,12 @@ st.title("Klasifikasi Gambar: Mobil vs Motor")
 uploaded_file = st.file_uploader("Upload gambar", type=["jpg", "jpeg", "png"])
 
 if uploaded_file is not None:
-    image = Image.open(uploaded_file).resize((64, 64))
+    image = Image.open(uploaded_file)
+    resizedImage = image.resize((64, 64))
+    
     st.image(image, caption="Gambar yang diupload", use_container_width=True)
 
-    img_array = np.expand_dims(np.array(image) / 255.0, axis=0)
+    img_array = np.expand_dims(np.array(resizedImage) / 255.0, axis=0)
 
     prediction = model.predict(img_array)
     label = "Mobil 🚗" if prediction[0][0] > 0.5 else "Motor 🏍️"
