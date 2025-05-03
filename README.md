@@ -64,3 +64,6 @@ Model hasil training (.h5) kemudian diintegrasikan ke dalam aplikasi web menggun
 ├── requirements.txt        # Daftar dependensi
 └── README.md
 ```
+
+## 📘 Dokumentasi
+[Dokumentasi Project CNN: Klasifikasi Mobil vs Motor](https://www.notion.so/Dokumentasi-Project-CNN-Klasifikasi-Mobil-vs-Motor-1e804ce89ecd805882d7e15d5e819224?pvs=4)
